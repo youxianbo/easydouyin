@@ -13,7 +13,7 @@
  * 获取用户的粉丝数据
  *
  * OpenAPI spec version: 1.0.0
- * 
+ *
  */
 
 namespace Douyin\Open\Model;
@@ -45,8 +45,8 @@ class FansDataResponseData implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'error_code' => '\Douyin\Open\Model\ErrorCode',
-'description' => '\Douyin\Open\Model\Description',
+        'error_code' => 'string',
+'description' => 'string',
 'fans_data' => '\Douyin\Open\Model\FansData'    ];
 
     /**
@@ -151,7 +151,7 @@ class FansDataResponseData implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
+
 
     /**
      * Associative array for storing property values

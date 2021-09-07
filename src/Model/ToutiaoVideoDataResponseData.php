@@ -13,7 +13,7 @@
  * 通过头条视频id批量获取已分享视频数据信息
  *
  * OpenAPI spec version: 1.0.0
- * 
+ *
  */
 
 namespace Douyin\Open\Model;
@@ -45,8 +45,8 @@ class ToutiaoVideoDataResponseData implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'error_code' => '\Douyin\Open\Model\ErrorCode',
-'description' => '\Douyin\Open\Model\Description',
+        'error_code' => 'string',
+'description' => 'string',
 'list' => '\Douyin\Open\Model\ToutiaoVideo[]'    ];
 
     /**
@@ -151,7 +151,7 @@ class ToutiaoVideoDataResponseData implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
+
 
     /**
      * Associative array for storing property values

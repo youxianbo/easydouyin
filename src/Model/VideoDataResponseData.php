@@ -13,7 +13,7 @@
  * 通过抖音视频id批量获取已分享视频数据信息
  *
  * OpenAPI spec version: 1.0.0
- * 
+ *
  */
 
 namespace Douyin\Open\Model;
@@ -45,8 +45,8 @@ class VideoDataResponseData implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'error_code' => '\Douyin\Open\Model\ErrorCode',
-'description' => '\Douyin\Open\Model\Description',
+        'error_code' => 'string',
+'description' => 'string',
 'video_data' => '\Douyin\Open\Model\VideoDataResponseDataResponse[]',
 'list' => '\Douyin\Open\Model\Video[]'    ];
 
@@ -156,7 +156,7 @@ class VideoDataResponseData implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
+
 
     /**
      * Associative array for storing property values

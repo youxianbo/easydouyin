@@ -15,7 +15,7 @@
  * 通过access_token查询该应用事件订阅状态
  *
  * OpenAPI spec version: 1.0.0
- * 
+ *
  */
 
 namespace Douyin\Open\Model;
@@ -47,7 +47,7 @@ class EventStatusUpdateResponseData implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'error_code' => '\Douyin\Open\Model\ErrorCode',
+        'error_code' => 'string',
 'description' => '\Douyin\Open\Model\Description'    ];
 
     /**
@@ -148,7 +148,7 @@ class EventStatusUpdateResponseData implements ModelInterface, ArrayAccess
         return self::$swaggerModelName;
     }
 
-    
+
 
     /**
      * Associative array for storing property values
