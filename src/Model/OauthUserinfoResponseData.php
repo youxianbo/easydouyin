@@ -560,7 +560,7 @@ self::E_ACCOUNT_ROLE_E_ACCOUNT_K,        ];
     public function setEAccountRole($e_account_role)
     {
         $allowedValues = $this->getEAccountRoleAllowableValues();
-        if (!is_null($e_account_role) && !in_array($e_account_role, $allowedValues, true)) {
+        if (!empty($e_account_role) && !in_array($e_account_role, $allowedValues, true)) {
             throw new \InvalidArgumentException(
                 sprintf(
                     "Invalid value for 'e_account_role', must be one of '%s'",
