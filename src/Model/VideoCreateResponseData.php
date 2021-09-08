@@ -47,7 +47,7 @@ class VideoCreateResponseData implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'error_code' => 'string',
 'description' => 'string',
-'item_id' => '\Douyin\Open\Model\EncryptedItemId'    ];
+'item_id' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
