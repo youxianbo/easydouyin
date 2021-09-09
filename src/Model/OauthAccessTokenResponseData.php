@@ -50,6 +50,7 @@ class OauthAccessTokenResponseData implements ModelInterface, ArrayAccess
 'access_token' => 'string',
 'expires_in' => 'string',
 'refresh_token' => 'string',
+'refresh_expires_in' => 'string',
 'open_id' => 'string',
 'scope' => 'string',
 'unionid' => 'string'    ];
@@ -65,6 +66,7 @@ class OauthAccessTokenResponseData implements ModelInterface, ArrayAccess
 'access_token' => null,
 'expires_in' => null,
 'refresh_token' => null,
+'refresh_expires_in' => null,
 'open_id' => null,
 'scope' => null,
 'unionid' => null    ];
@@ -101,6 +103,7 @@ class OauthAccessTokenResponseData implements ModelInterface, ArrayAccess
 'access_token' => 'access_token',
 'expires_in' => 'expires_in',
 'refresh_token' => 'refresh_token',
+'refresh_expires_in' => 'refresh_expires_in',
 'open_id' => 'open_id',
 'scope' => 'scope',
 'unionid' => 'unionid'    ];
@@ -116,6 +119,7 @@ class OauthAccessTokenResponseData implements ModelInterface, ArrayAccess
 'access_token' => 'setAccessToken',
 'expires_in' => 'setExpiresIn',
 'refresh_token' => 'setRefreshToken',
+'refresh_expires_in' => 'setRefreshExpiresIn',
 'open_id' => 'setOpenId',
 'scope' => 'setScope',
 'unionid' => 'setUnionid'    ];
@@ -131,6 +135,7 @@ class OauthAccessTokenResponseData implements ModelInterface, ArrayAccess
 'access_token' => 'getAccessToken',
 'expires_in' => 'getExpiresIn',
 'refresh_token' => 'getRefreshToken',
+'refresh_expires_in' => 'getRefreshExpiresIn',
 'open_id' => 'getOpenId',
 'scope' => 'getScope',
 'unionid' => 'getUnionid'    ];
@@ -198,6 +203,7 @@ class OauthAccessTokenResponseData implements ModelInterface, ArrayAccess
         $this->container['access_token'] = isset($data['access_token']) ? $data['access_token'] : null;
         $this->container['expires_in'] = isset($data['expires_in']) ? $data['expires_in'] : null;
         $this->container['refresh_token'] = isset($data['refresh_token']) ? $data['refresh_token'] : null;
+        $this->container['refresh_expires_in'] = isset($data['refresh_expires_in']) ? $data['refresh_expires_in'] : null;
         $this->container['open_id'] = isset($data['open_id']) ? $data['open_id'] : null;
         $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
         $this->container['unionid'] = isset($data['unionid']) ? $data['unionid'] : null;
@@ -343,6 +349,30 @@ class OauthAccessTokenResponseData implements ModelInterface, ArrayAccess
     public function setRefreshToken($refresh_token)
     {
         $this->container['refresh_token'] = $refresh_token;
+
+        return $this;
+    }
+
+    /**
+     * Gets refresh_expires_in
+     *
+     * @return string
+     */
+    public function getRefreshExpiresIn()
+    {
+        return $this->container['refresh_expires_in'];
+    }
+
+    /**
+     * Sets expires_in
+     *
+     * @param string $expires_in access_token接口调用凭证超时时间，单位（秒
+     *
+     * @return $this
+     */
+    public function setRefreshExpiresIn($refresh_expires_in)
+    {
+        $this->container['refresh_expires_in'] = $refresh_expires_in;
 
         return $this;
     }
