@@ -33,39 +33,41 @@ class OauthRefreshTokenResponseData implements ModelInterface, ArrayAccess
     const DISCRIMINATOR = null;
 
     /**
-      * The original name of the model.
-      *
-      * @var string
-      */
+     * The original name of the model.
+     *
+     * @var string
+     */
     protected static $swaggerModelName = 'OauthRefresh_tokenResponseData';
 
     /**
-      * Array of property to type mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to type mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $swaggerTypes = [
         'error_code' => 'string',
-'description' => 'string',
-'access_token' => 'string',
-'expires_in' => 'string',
-'refresh_token' => 'string',
-'open_id' => 'string',
-'scope' => 'string'    ];
+        'description' => 'string',
+        'access_token' => 'string',
+        'expires_in' => 'string',
+        'refresh_token' => 'string',
+        'refresh_expires_in' => 'string',
+        'open_id' => 'string',
+        'scope' => 'string'];
 
     /**
-      * Array of property to format mappings. Used for (de)serialization
-      *
-      * @var string[]
-      */
+     * Array of property to format mappings. Used for (de)serialization
+     *
+     * @var string[]
+     */
     protected static $swaggerFormats = [
         'error_code' => null,
-'description' => null,
-'access_token' => null,
-'expires_in' => null,
-'refresh_token' => null,
-'open_id' => null,
-'scope' => null    ];
+        'description' => null,
+        'access_token' => null,
+        'expires_in' => null,
+        'refresh_token' => null,
+        'refresh_expires_in' => null,
+        'open_id' => null,
+        'scope' => null];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,12 +97,13 @@ class OauthRefreshTokenResponseData implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'error_code' => 'error_code',
-'description' => 'description',
-'access_token' => 'access_token',
-'expires_in' => 'expires_in',
-'refresh_token' => 'refresh_token',
-'open_id' => 'open_id',
-'scope' => 'scope'    ];
+        'description' => 'description',
+        'access_token' => 'access_token',
+        'expires_in' => 'expires_in',
+        'refresh_token' => 'refresh_token',
+        'refresh_expires_in' => 'refresh_expires_in',
+        'open_id' => 'open_id',
+        'scope' => 'scope'];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -109,12 +112,13 @@ class OauthRefreshTokenResponseData implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'error_code' => 'setErrorCode',
-'description' => 'setDescription',
-'access_token' => 'setAccessToken',
-'expires_in' => 'setExpiresIn',
-'refresh_token' => 'setRefreshToken',
-'open_id' => 'setOpenId',
-'scope' => 'setScope'    ];
+        'description' => 'setDescription',
+        'access_token' => 'setAccessToken',
+        'expires_in' => 'setExpiresIn',
+        'refresh_token' => 'setRefreshToken',
+        'refresh_expires_in' => 'setRefreshExpiresIn',
+        'open_id' => 'setOpenId',
+        'scope' => 'setScope'];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -123,12 +127,13 @@ class OauthRefreshTokenResponseData implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'error_code' => 'getErrorCode',
-'description' => 'getDescription',
-'access_token' => 'getAccessToken',
-'expires_in' => 'getExpiresIn',
-'refresh_token' => 'getRefreshToken',
-'open_id' => 'getOpenId',
-'scope' => 'getScope'    ];
+        'description' => 'getDescription',
+        'access_token' => 'getAccessToken',
+        'expires_in' => 'getExpiresIn',
+        'refresh_token' => 'getRefreshToken',
+        'refresh_expires_in' => 'getRefreshExpiresIn',
+        'open_id' => 'getOpenId',
+        'scope' => 'getScope'];
 
     /**
      * Array of attributes where the key is the local name,
@@ -172,7 +177,6 @@ class OauthRefreshTokenResponseData implements ModelInterface, ArrayAccess
     }
 
 
-
     /**
      * Associative array for storing property values
      *
@@ -193,6 +197,7 @@ class OauthRefreshTokenResponseData implements ModelInterface, ArrayAccess
         $this->container['access_token'] = isset($data['access_token']) ? $data['access_token'] : null;
         $this->container['expires_in'] = isset($data['expires_in']) ? $data['expires_in'] : null;
         $this->container['refresh_token'] = isset($data['refresh_token']) ? $data['refresh_token'] : null;
+        $this->container['refresh_expires_in'] = isset($data['refresh_expires_in']) ? $data['refresh_expires_in'] : null;
         $this->container['open_id'] = isset($data['open_id']) ? $data['open_id'] : null;
         $this->container['scope'] = isset($data['scope']) ? $data['scope'] : null;
     }
@@ -342,6 +347,30 @@ class OauthRefreshTokenResponseData implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets refresh_expires_in
+     *
+     * @return string
+     */
+    public function getRefreshExpiresIn()
+    {
+        return $this->container['refresh_expires_in'];
+    }
+
+    /**
+     * Sets expires_in
+     *
+     * @param string $refresh_expires_in 过期时间，单位（秒）
+     *
+     * @return $this
+     */
+    public function setRefreshExpiresIn($refresh_expires_in)
+    {
+        $this->container['refresh_expires_in'] = $refresh_expires_in;
+
+        return $this;
+    }
+
+    /**
      * Gets open_id
      *
      * @return string
@@ -388,6 +417,7 @@ class OauthRefreshTokenResponseData implements ModelInterface, ArrayAccess
 
         return $this;
     }
+
     /**
      * Returns true if offset exists. False otherwise.
      *
@@ -416,7 +446,7 @@ class OauthRefreshTokenResponseData implements ModelInterface, ArrayAccess
      * Sets value based on offset.
      *
      * @param integer $offset Offset
-     * @param mixed   $value  Value to be set
+     * @param mixed $value Value to be set
      *
      * @return void
      */
