@@ -47,8 +47,8 @@ class VideoListResponseData implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'error_code' => 'string',
 'description' => 'string',
-'cursor' => '\Douyin\Open\Model\Cursor',
-'has_more' => '\Douyin\Open\Model\HasMore',
+'cursor' => 'int',
+'has_more' => 'bool',
 'list' => '\Douyin\Open\Model\Video[]'    ];
 
     /**
@@ -59,8 +59,8 @@ class VideoListResponseData implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'error_code' => null,
 'description' => null,
-'cursor' => null,
-'has_more' => null,
+'cursor' => 'int64',
+'has_more' => 'bool',
 'list' => null    ];
 
     /**

@@ -1,11 +1,11 @@
 {
-    "name": "ccc008\/easydouyin",
+    "name": "youxianbo\/easydouyin",
     "description": "douyin open platform sdk",
     "license": "MIT",
     "authors": [
         {
-            "name": "chengli",
-            "email": "www00718@163.com"
+            "name": "joyber",
+            "email": "joyber@qq.com"
         }
     ],
     "require": {
