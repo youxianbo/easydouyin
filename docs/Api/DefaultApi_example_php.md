@@ -88,3 +88,24 @@ try {
 }
 ?>
 ```
+###DefaultApi_oauthRenewRefreshTokenGet
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Douyin\Open\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$client_key = "client_key_example"; // string | 应用唯一标识
+$refresh_token = "refresh_token_example"; // string | 填写通过access_token获取到的refresh_token参数
+
+try {
+    $result = $apiInstance->oauthRenewRefreshTokenGet($client_key, $refresh_token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->oauthRenewRefreshTokenGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```

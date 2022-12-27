@@ -2,12 +2,13 @@
 
 All URIs are relative to *https://open.snssdk.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**oauthAccessTokenGet**](DefaultApi.md#oauthaccesstokenget) | **GET** /oauth/access_token/ | 获取access_token
-[**oauthAuthorizeGet**](DefaultApi.md#oauthauthorizeget) | **GET** /oauth/authorize/ | 获取授权码(code)
-[**oauthClientTokenGet**](DefaultApi.md#oauthclienttokenget) | **GET** /oauth/client_token/ | 生成client_token
-[**oauthRefreshTokenGet**](DefaultApi.md#oauthrefreshtokenget) | **GET** /oauth/refresh_token/ | 刷新access_token
+Method | HTTP request                        | Description
+------------- |-------------------------------------| -------------
+[**oauthAccessTokenGet**](DefaultApi.md#oauthaccesstokenget) | **GET** /oauth/access_token/        | 获取access_token
+[**oauthAuthorizeGet**](DefaultApi.md#oauthauthorizeget) | **GET** /oauth/authorize/           | 获取授权码(code)
+[**oauthClientTokenGet**](DefaultApi.md#oauthclienttokenget) | **GET** /oauth/client_token/        | 生成client_token
+[**oauthRefreshTokenGet**](DefaultApi.md#oauthrefreshtokenget) | **GET** /oauth/refresh_token/       | 刷新access_token
+[**oauthRenewRefreshTokenGet**](DefaultApi.md#oauthrenewrefreshtokenget) | **GET** /oauth/renew_refresh_token/ | 刷新refresh_token
 
 # **oauthAccessTokenGet**
 > \Douyin\Open\Model\OauthAccessTokenResponse oauthAccessTokenGet($client_key, $client_secret, $code, $grant_type)
@@ -208,6 +209,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Douyin\Open\Model\OauthRefreshTokenResponse**](../Model/OauthRefreshTokenResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+
+# **oauthRenewRefreshTokenGet**
+> \Douyin\Open\Model\OauthRenewRefreshTokenResponse oauthRenewRefreshTokenGet($client_key, $refresh_token)
+
+刷新refresh_token
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Douyin\Open\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$client_key = "client_key_example"; // string | 应用唯一标识
+$refresh_token = "refresh_token_example"; // string | 填写通过access_token获取到的refresh_token参数
+
+try {
+    $result = $apiInstance->oauthRenewRefreshTokenGet($client_key, $refresh_token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->oauthRenewRefreshTokenGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **client_key** | **string**| 应用唯一标识 |
+ **refresh_token** | **string**| 填写通过access_token获取到的refresh_token参数 |
+
+### Return type
+
+[**\Douyin\Open\Model\OauthRenewRefreshTokenResponse**](../Model/OauthRenewRefreshTokenResponse.md)
 
 ### Authorization
 
