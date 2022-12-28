@@ -956,17 +956,16 @@ class DefaultApi
     }
 
     /**
-     * Operation oauthRefreshTokenGet
+     * Operation oauthRenewRefreshTokenGet
      *
      * 刷新access_token
      *
      * @param  string $client_key 应用唯一标识 (required)
-     * @param  string $grant_type 填refresh_token (required)
      * @param  string $refresh_token 填写通过access_token获取到的refresh_token参数 (required)
      *
      * @throws \Douyin\Open\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Douyin\Open\Model\OauthRefreshTokenResponse
+     * @return \Douyin\Open\Model\OauthRenewRefreshTokenResponse
      */
     public function oauthRenewRefreshTokenGet($client_key, $refresh_token)
     {
@@ -975,17 +974,16 @@ class DefaultApi
     }
 
     /**
-     * Operation oauthRefreshTokenGetWithHttpInfo
+     * Operation oauthRenewRefreshTokenGetWithHttpInfo
      *
      * 刷新access_token
      *
      * @param  string $client_key 应用唯一标识 (required)
-     * @param  string $grant_type 填refresh_token (required)
      * @param  string $refresh_token 填写通过access_token获取到的refresh_token参数 (required)
      *
      * @throws \Douyin\Open\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Douyin\Open\Model\OauthRefreshTokenResponse, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Douyin\Open\Model\OauthRenewRefreshTokenResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function oauthRenewRefreshTokenGetWithHttpInfo($client_key, $refresh_token)
     {
